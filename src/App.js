@@ -4,18 +4,21 @@ import Navbar from './components/Navbar'
 // import Footer from './components/Footer'
 import Cart from './pages/cart/cart'
 import Shop from './pages/shop/shop'
+import ShopContextProvider from './context/shop-context'
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-        {/* <Footer /> */}
-      </Router>
+      <ShopContextProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+          {/* <Footer /> */}
+        </Router>
+      </ShopContextProvider>
     </div>
   )
 }

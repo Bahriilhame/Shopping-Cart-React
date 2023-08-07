@@ -33,9 +33,12 @@ body {
   justify-content: space-evenly;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   padding: 10px;
+  box-shadow: rgba(60, 64, 67, 0.4) 0px 1px 2px 0px;
+}
+.product:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.3) 0px 2px 6px 2px;
 }
 .product div:first-child {
   height: 65%;
@@ -63,12 +66,16 @@ h2 {
 button {
   width: 60%;
   margin: auto;
-  background-color: #ffe641;
+  background-color: #fff;
   padding: 10px 30px;
   color: #333;
   font-size: 18px;
   font-weight: 600;
-  border: none;
+  border: 2px solid #ffe641;
   border-radius: 5px;
   cursor: pointer;
+}
+button:hover {
+  background-color: #ffe641;
+  transition: 0.4s ease-in-out;
 }
